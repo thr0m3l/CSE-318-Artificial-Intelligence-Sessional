@@ -1,0 +1,48 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+  {
+    "name": "(gdb) Attach",
+    "type": "cppdbg",
+    "request": "attach",
+    "program": "enter program name, for example ${workspaceFolder}/a.out",
+    "processId": "${command:pickProcess}",
+    "MIMode": "gdb",
+    "setupCommands": [
+        {
+            "description": "Enable pretty-printing for gdb",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+        },
+        {
+            "description":  "Set Disassembly Flavor to Intel",
+            "text": "-gdb-set disassembly-flavor intel",
+            "ignoreFailures": true
+        }
+    ]
+  },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [
+        ""
+      ],
+      "stopAtEntry": false,
+      "cwd": "/home/romel/github/CSE318-Artificial-Intelligence/Offline 2 (Adversarial Search)/MancalaCpp",
+      "environment": [],
+      "program": "/home/romel/github/CSE318-Artificial-Intelligence/Offline 2 (Adversarial Search)/MancalaCpp/build/Debug/outDebug",
+      "internalConsoleOptions": "openOnSessionStart",
+      "MIMode": "gdb",
+      "miDebuggerPath": "/usr/bin/gdb",
+      "externalConsole": false,
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
